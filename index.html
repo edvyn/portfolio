@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edvyn - desenvolvimento de software</title>
+    <link rel="stylesheet" href="media/styles.css">
+</head>
+<body class="dark">
+    <style>
+        @font-face {
+            font-family: "Amazing Quirky";
+            src: url("fonts/Amazing%20Quirky.woff2") format("woff2");
+            font-display: swap;
+        }
+    
+    </style>
+
+<section class="navbar">
+    <div class="navbar-container">
+        <!-- Hamburguer Menu -->
+        <div class="hamburguer" id="hamburguer">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="logo">
+            <img src="media/img/logo.svg" alt="logo Edvyn">
+        </div>
+
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="">início</a></li>
+                    <li><a href="">projetos</a></li>
+                    <li><a href="">sobre mim</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="options">
+            <div class="idiomas">
+                <a id="language-button">port</a>
+                <div class="idiomas-content">
+                    <a href="#" onclick="changeLanguage('pt')">Português</a>
+                    <a href="#" onclick="changeLanguage('en')">English</a>
+                    <a href="#" onclick="changeLanguage('es')">Español</a>
+                </div>
+            </div>
+
+            <body class="light">
+                <div class="theme">
+                    <button id="toggleTheme">dark</button>
+                </div>
+            </body>
+        </div>
+    </div>
+</section>
+
+
+    <section class="hero">
+        <div class="hero-container">
+
+        </div>
+    </section>
+
+    <script src="media/script.js"></script>
+</body>
+</html>
