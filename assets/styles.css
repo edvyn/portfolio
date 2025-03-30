@@ -113,9 +113,9 @@ a {
     display: block;
 }
 #language-button::after {
-    content: " ▼"; /* Código da seta para baixo */
-    font-size: 0.8rem; /* Ajuste o tamanho conforme necessário */
-    margin-left: 5px; /* Espaço entre o texto e a seta */
+    content: " ▼"; 
+    font-size: 0.8rem; 
+    margin-left: 5px; 
     display: inline-block;
 }
 
@@ -137,13 +137,13 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%; /* Garantir que ocupe toda a largura */
+        width: 100%;
     }
 
     .nav-container {
         display: none;
         flex-direction: column;
-        width: 100%; /* Ocupa toda a largura disponível */
+        width: 100%; 
     }
 
     .nav-container.active {
@@ -164,11 +164,11 @@ a {
     ul {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centralizar horizontalmente */
-        justify-content: center; /* Centralizar verticalmente */
-        width: 100%; /* Garantir que o ul ocupe toda a largura */
-        padding: 0; /* Remover qualquer padding */
-        margin: 0; /* Remover qualquer margem */
+        align-items: center; 
+        justify-content: center; 
+        width: 100%; 
+        padding: 0;
+        margin: 0; 
         padding-top: 40px;
         padding-bottom: 40px;
     }
@@ -176,7 +176,7 @@ a {
     li {
         display: block;
         text-align: center;
-        width: 100%; /* Garantir que cada item ocupe toda a largura */
+        width: 100%; 
     }
 }
 
