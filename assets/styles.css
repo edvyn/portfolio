@@ -1,0 +1,182 @@
+:root {
+    --dark-color: #171818;
+    --primary-color: #C1F9FF;
+    --secondary-color: #3EA6B1;
+    --tertiary-color: #15383C;
+    --light-color: #E3EBEC;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Amazing Quirky", sans-serif;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+/* navbar */
+
+.navbar {
+    display: flex;
+    background-color: var(--dark-color);
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    padding: 10px;
+    position: relative;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.hamburguer {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburguer .line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.hamburguer.active .line:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 6px;
+}
+
+.hamburguer.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguer.active .line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -6px;
+}
+
+.logo img {
+    width: 70px;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.idiomas {
+    position: relative;
+    display: inline-block;
+}
+
+.idiomas-content {
+    display: none;
+    position: absolute;
+    background-color: #171818a8;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.idiomas-content a {
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.idiomas-content a:hover {
+    background-color: #797979;
+}
+
+.idiomas:hover .idiomas-content {
+    display: block;
+}
+#language-button::after {
+    content: " ▼"; /* Código da seta para baixo */
+    font-size: 0.8rem; /* Ajuste o tamanho conforme necessário */
+    margin-left: 5px; /* Espaço entre o texto e a seta */
+    display: inline-block;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .options{
+        gap: 0;
+        flex-direction: column-reverse;
+    }
+
+    .idiomas-content{
+        position: absolute;
+        top: 50px;
+        right: -13px;
+
+    }
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Garantir que ocupe toda a largura */
+    }
+
+    .nav-container {
+        display: none;
+        flex-direction: column;
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    .nav-container.active {
+        display: flex;
+        position: absolute;
+        top: 100px; 
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-color); 
+        padding: 0;
+        margin: 0;
+    }
+
+    .hamburguer {
+        display: flex;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centralizar horizontalmente */
+        justify-content: center; /* Centralizar verticalmente */
+        width: 100%; /* Garantir que o ul ocupe toda a largura */
+        padding: 0; /* Remover qualquer padding */
+        margin: 0; /* Remover qualquer margem */
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    li {
+        display: block;
+        text-align: center;
+        width: 100%; /* Garantir que cada item ocupe toda a largura */
+    }
+}
+
