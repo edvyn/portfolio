@@ -1,11 +1,10 @@
 /*lang change*/
 function changeLanguage(lang) {
     document.getElementById("language-button").innerText = {
-        'pt': 'port',
-        'en': 'eng',
-        'es': 'esp'
+        'pt': 'pt',
+        'en': 'en',
+        'es': 'es'
     }[lang];
-    alert("Idioma selecionado: " + lang);
 }
 
 /*theme change*/
@@ -13,14 +12,14 @@ const button = document.getElementById('toggleTheme');
 const body = document.body;
 
 button.addEventListener('click', () => {
-    if (body.classList.contains('light')) {
-        body.classList.remove('light');
-        body.classList.add('dark');
-        button.textContent = 'light'; // Atualiza o texto para "Claro"
-    } else {
+    if (body.classList.contains('dark')) {
         body.classList.remove('dark');
         body.classList.add('light');
-        button.textContent = 'dark'; // Atualiza o texto para "Escuro"
+        button.textContent = 'dark'; // Atualiza o texto para "Claro"
+    } else {
+        body.classList.remove('light');
+        body.classList.add('dark');
+        button.textContent = 'light'; // Atualiza o texto para "Escuro"
     }
 });
 

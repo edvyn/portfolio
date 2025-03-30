@@ -76,7 +76,7 @@ a {
 }
 
 .logo img {
-    width: 70px;
+    width: 60px;
 }
 
 .options {
@@ -94,7 +94,7 @@ a {
     display: none;
     position: absolute;
     background-color: #171818a8;
-    min-width: 160px;
+    min-width: 120px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -180,3 +180,64 @@ a {
     }
 }
 
+/* hero */
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-color);
+    min-height: fit-content;
+    height: calc(100vh - 100px);
+
+}
+.hero-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1400px;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile img{
+    width: 60%;
+    max-width: 500px;
+    border: 5px solid var(--primary-color);
+    border-radius: 50%;
+}
+.profile h1{
+    font-size: 3rem;
+    margin: 10px;
+    color: var(--light-color);
+}
+.profile span{
+    color: var(--secondary-color);
+}
+.profile p{
+    width: 90%;
+    max-width: 500px;
+    text-align: justify;
+}
+
+.profile-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.btn {
+    flex: 1; /* Faz com que ambos os botões ocupem o mesmo espaço */
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    padding: 12px 24px;
+    margin: 5px;
+    text-align: center;
+    max-width: 200px;
+}
