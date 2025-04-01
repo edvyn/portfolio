@@ -6,6 +6,8 @@
     <title>Edvyn</title>
     <link rel="stylesheet" href="assets/styles.css">
     <script src="assets/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
 
 
 </head>
@@ -19,6 +21,7 @@
         }
     
     </style>
+    
 <section class="navbar">
     <div class="navbar-container" id="navcontainer">
         <!-- Hamburguer Menu -->
@@ -35,8 +38,8 @@
         <div class="nav-container">
             <nav>
                 <ul>
-                    <li><a href="">início</a></li>
-                    <li><a href="">skills</a></li>
+                    <li><a href="#particles-js">início</a></li>
+                    <li><a href="#skills">skills</a></li>
                     <li><a href="">projetos</a></li>
                     <li><a href="">sobre mim</a></li>
                 </ul>
@@ -62,7 +65,7 @@
 </section>
 
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero-container">
             <div class="profile">
                 <img src="assets/media/img/profile.png" alt="">
@@ -76,9 +79,15 @@
         </div>
     </section>
 
-    <section class="skills">
-        <div class="skills-container">
-            
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2>Tools and Technologies</h2>
+            <select id="category">
+                <option value="development">Desenvolvimento de software</option>
+                <option value="design">Design</option>
+                <option value="video">Edição de Vídeo</option>
+            </select>
+            <div class="grid" id="skills-grid"></div>
         </div>
     </section>
 

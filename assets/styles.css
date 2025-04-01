@@ -6,6 +6,7 @@
     --light-color: #e3ece6;
     --aux-color:#15383C;
     --dropdown-color:#171818a8;
+    --skills-color:#6ba5a2;
 }
 
 html,body{
@@ -18,7 +19,6 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Afacad", sans-serif;
-    color: var(--primary-color);
 }
 
 ul {
@@ -49,8 +49,12 @@ a {
     justify-content: center;
     align-items: center;
     height: 80px;
-    padding: 10px;
-    position: relative;
+    position: fixed; /* Fixar no topo */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupar toda a largura */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+
 }
 
 .navbar-container {
@@ -199,6 +203,7 @@ transition-duration: .2s;
     .navbar-container {
         padding-left: 2px;
         padding-right: 0px;
+        width: 90%;
     }
 
 
@@ -269,11 +274,13 @@ transition-duration: .2s;
 
 .hero{
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     min-height: fit-content;
-    height: calc(100vh - 110px);
-    padding-bottom: 10px;
+    height: calc(100vh - 20px);
+    padding-bottom: 50px;
+    padding-top: 60px;
 
 }
 .hero-container{
@@ -292,13 +299,13 @@ transition-duration: .2s;
 }
 .profile img{
     width: 60%;
-    max-width: 500px;
+    max-width: 350px;
     border: 5px solid var(--aux-color);
     border-radius: 50%;
 }
 .profile h1{
     font-size: 2.5rem;
-    margin: 10px;
+    margin: 1px;
     color: #C1F9FF;
 }
 .profile span{
@@ -311,6 +318,7 @@ transition-duration: .2s;
     text-align: justify;
     color: var(--tertiary-color);
     font-weight: 500;
+    margin: 5px;
 }
 
 .profile-buttons {
@@ -334,6 +342,81 @@ transition-duration: .2s;
 
 
 .skills{
-    height: 100vh;
-    background-color: #6ba5a2;
+    display: flex;
+    justify-content: center;
+    min-height: fit-content;
+    background-color: var(--skills-color);
+    padding: 5px;
+    padding-bottom: 60px;
+    color: white;
+}
+
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 20px auto;
+}
+
+.container h2{
+    font-size: 3rem;
+    line-height: 2.5rem;
+    font-weight: 500;
+}
+
+select {
+
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: 0px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Afacad', sans-serif;
+}
+
+select option{
+    background-color: #2b2b2b;
+    border-radius: 0px;
+    font-size: 1rem;
+    width: fit-content;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10px;
+}
+.grid-item {
+    padding: 10px;
+    height: 80px;
+    background: #175861bd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-container{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-container{
+    width: 75%;
+    color: white;
+    padding-left: 10px;
+    border-left: 1px solid #6ba5a2;
+}
+.skill-title{
+    font-size: 1.5rem;
+    font-size: bold;
+}
+
+
+@media screen and (max-width:600px){
+    .grid{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    }
 }
